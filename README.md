@@ -14,5 +14,3 @@ Do not enable Hellhounds.
 
 ## Known Bugs
 * Some zombies ignore the barrier
-
-## Enjoy!
