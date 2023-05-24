@@ -1,7 +1,8 @@
 # World's Smallest Map - Custom Zombies Map
 This script adds the smallest map to black ops 2 zombies.
 
-Once the map is installed, play Town and that's it! Do not enable Hellhounds.
+Once the map is installed, play Town and that's it!
+Do not enable Hellhounds.
 
 ## How To Install On Plutonium
 1. Head over to [Releases](https://github.com/ElectroGamesYT/BO2-Worlds-Smallest-Map/releases) and download the latest release.
