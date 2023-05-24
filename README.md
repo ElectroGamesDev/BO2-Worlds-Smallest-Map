@@ -1,4 +1,4 @@
-# World's Smallest Map Custom Zombies Map in Black Ops 2!
+# World's Smallest Map Custom Zombies Map
 This script adds the smallest map to black ops 2 zombies.
 
 Once the map is installed, play Town and that's it! Do not enable Hellhounds.
