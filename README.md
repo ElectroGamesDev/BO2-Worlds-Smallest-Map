@@ -6,7 +6,7 @@ Once the map is installed, play Town and that's it!
 Do not enable Hellhounds.
 
 ## How To Install On Plutonium
-1. Head over to [Releases](https://github.com/ElectroGamesYT/BO2-Worlds-Smallest-Map/releases) and download the latest release.
+1. Head over to [Releases](https://github.com/ElectroGamesYT/BO2-Worlds-Smallest-Map/releases/latest) and download the latest release.
 2. Press **Win+R** and paste **%localappdata%\Plutonium\storage\t6\scripts\zm** then click **OK**.
 3. Copy and paste or drag the downloaded WorldsSmallestMap.gcs file to this folder.
 3. You're done, now load up Town and have fun! :D
