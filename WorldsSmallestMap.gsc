@@ -20,7 +20,7 @@ init() // entry point
     level thread onplayerconnect();
 	if (getdvar("ui_zm_mapstartlocation") != "town") return;
 	box_init();
-    level thread changeZombieSpawners();
+	level thread changeZombieSpawners();
 	level thread movePerkMachines();
 	level thread spawnCustomObjects();
 
@@ -93,54 +93,26 @@ onplayerspawned()
 teleportToSpawn()
 {
     player = level.players;
-	if( player[ 0] == self )
-	{
-		player[ 0] setorigin( (2366.8, -731.829, -55.875 ) );
-	}
-	if( player[ 1] == self )
-	{
-		player[ 1] setorigin( (2365.72, -680.334, -55.875) );
-	}
-	if( player[ 2] == self )
-	{
-		player[ 2] setorigin( (2335.91, -680.318, -55.875 ) );
-	}
-	if( player[ 3] == self )
-	{
-		player[ 3] setorigin( (2360.97, -774.943, -55.875 ) );
-	}
+	if( player[ 0] == self ) player[ 0] setorigin( (2366.8, -731.829, -55.875 ) );
+	if( player[ 1] == self ) player[ 1] setorigin( (2365.72, -680.334, -55.875) );
+	if( player[ 2] == self ) player[ 2] setorigin( (2335.91, -680.318, -55.875 ) );
+	if( player[ 3] == self ) player[ 3] setorigin( (2360.97, -774.943, -55.875 ) );
 }
 
 changeZombieSpawners()
 {
 	flag_wait( "initial_blackscreen_passed" );
-	level.zombie_spawn_locations[0].origin = (2350.74, -850, -55.875);
-	level.zombie_spawn_locations[1].origin = (2350.74, -850, -55.875);
-	level.zombie_spawn_locations[2].origin = (2350.74, -850, -55.875);
-	level.zombie_spawn_locations[3].origin = (2350.74, -850, -55.875);
-	level.zombie_spawn_locations[4].origin = (2350.74, -850, -55.875);
-	level.zombie_spawn_locations[5].origin = (2350.74, -850, -55.875);
-	level.zombie_spawn_locations[6].origin = (2350.74, -850, -55.875);
-	level.zombie_spawn_locations[7].origin = (2350.74, -850, -55.875);
-	level.zombie_spawn_locations[8].origin = (2350.74, -850, -55.875);
-	level.zombie_spawn_locations[9].origin = (2350.74, -850, -55.875);
-	level.zombie_spawn_locations[10].origin = (2350.74, -850, -55.875);
-	level.zombie_spawn_locations[11].origin = (2350.74, -850, -55.875);
-	level.zombie_spawn_locations[12].origin = (2350.74, -850, -55.875);
-	level.zombie_spawn_locations[13].origin = (2350.74, -850, -55.875);
-	level.zombie_spawn_locations[14].origin = (2350.74, -850, -55.875);
-	level.zombie_spawn_locations[15].origin = (2350.74, -850, -55.875);
-	level.zombie_spawn_locations[16].origin = (2350.74, -850, -55.875);
-	level.zombie_spawn_locations[17].origin = (2350.74, -850, -55.875);
-	level.zombie_spawn_locations[18].origin = (2350.74, -850, -55.875);
-	level.zombie_spawn_locations[19].origin = (2350.74, -850, -55.875);
-	level.zombie_spawn_locations[20].origin = (2350.74, -850, -55.875);
-	level.zombie_spawn_locations[21].origin = (2350.74, -850, -55.875);
-	level.zombie_spawn_locations[22].origin = (2350.74, -850, -55.875);
-	level.zombie_spawn_locations[23].origin = (2350.74, -850, -55.875);
-	level.zombie_spawn_locations[24].origin = (2350.74, -850, -55.875);
-	level.zombie_spawn_locations[25].origin = (2350.74, -850, -55.875);
-	level.player_spawn_locations[25].origin = (2350.74, -850, -55.875);
+	spawners = level.zombie_spawn_locations;
+	for(i=0; i <spawners.size; i++)
+	{
+    	if (distance(spawners[i].origin, (2889, -1045, -55)) < 200)
+    	{
+        	spawners[i].origin = (2350, -885, -55.875);
+        	spawners[i].script_noteworthy = "riser_location";
+        	continue;
+    	}
+    	spawners[i].is_enabled = 0;
+	}
 }
 
 movePerkMachines()
@@ -290,11 +262,6 @@ perksquickr()
 						self.lock = 0;
 						player.machine_is_in_use = 0;
 						//self.setorigin( (2366.8, -731.829, -999 ) );
-
-						//if (level.solo_revives >= level.max_solo_revives)
-						//{
-						//	
-						//}
 					}
                     if(level.max_revives && (players.size <= 1) && player usebuttonpressed() && (player.score >= 500) && !(self.lock) && !player maps\mp\zombies\_zm_laststand::player_is_in_laststand()) 
 					{
