@@ -12,6 +12,3 @@ Do not enable Hellhounds.
 3. You're done, now load up Town and have fun! :D
 
 ## If you encounter any issues or if you have any suggestions, open an [Issue](https://github.com/ElectroGamesYT/BO2-Worlds-Smallest-Map/issues/new)!
-
-## Known Bugs
-* Some zombies ignore the barrier
