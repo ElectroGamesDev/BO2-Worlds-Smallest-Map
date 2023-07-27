@@ -86,7 +86,7 @@ onplayerspawned()
         if (getdvar("ui_zm_mapstartlocation") != "town") return;
 		self teleportToSpawn();
 		flag_wait("initial_blackscreen_passed");
-		iprintln("^2World's Smallest Map Created By Elecrto Games");
+		iprintln("^2World's Smallest Map Created By Electro Games");
     }
 }
 
